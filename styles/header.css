@@ -1,0 +1,58 @@
+.header_wrapper {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between; /* Свойство justify-content в CSS определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль главной оси контейнера (горизонтально). Это свойство применяется к flex-контейнерам. */
+    align-items: center; /* Свойство align-items в CSS определяет, как элементы внутри flex-контейнера выравниваются по поперечной оси */
+}
+
+.header_nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+    column-gap: min(70px, 4vw); /* Свойство column-gap в CSS указывает величину зазора (промежутка) между колонками элемента */
+
+}
+
+.header_nav_link {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--co-black);
+    transition: 0.2s;
+    white-space: nowrap; /* white-space: nowrap — значение свойства white-space в CSS, которое запрещает перенос текста на следующую строку. */
+}
+
+.header_nav_link:hover {
+    color: var(--co-light-green);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header_nav_link:focus-visible {
+    outline: 2px solid var(--co-dark-green);
+}
+
+.header_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+}
+
+@media (max-width: 992px) {
+    .header_nav_link {
+        font-size: 16px;
+    }
+    .btn {
+        width: 120px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_nav {
+        display: none;
+    }
+}
